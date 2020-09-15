@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useTheme} from '@react-navigation/native';
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = (props, {navigation}) => {
   const {colors} = useTheme();
 
   const theme = useTheme();
@@ -36,9 +36,9 @@ const HomeScreen = ({navigation}) => {
                   marginBottom: 5,
                 },
               ]}>
-              Product Name
+              {props.item.title}
             </Title>
-            <Caption style={styles.caption}>Product Description</Caption>
+            <Caption style={styles.caption}>Product</Caption>
           </View>
         </View>
       </View>
